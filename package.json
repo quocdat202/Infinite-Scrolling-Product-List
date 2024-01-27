@@ -1,0 +1,67 @@
+{
+  "name": "my-website",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@ckeditor/ckeditor5-basic-styles": "^40.2.0",
+    "@ckeditor/ckeditor5-build-classic": "^40.2.0",
+    "@ckeditor/ckeditor5-dev-utils": "^39.5.0",
+    "@ckeditor/ckeditor5-editor-classic": "^40.2.0",
+    "@ckeditor/ckeditor5-essentials": "^40.2.0",
+    "@ckeditor/ckeditor5-paragraph": "^40.2.0",
+    "@ckeditor/ckeditor5-react": "^6.2.0",
+    "@ckeditor/ckeditor5-theme-lark": "^40.2.0",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@reduxjs/toolkit": "^1.9.5",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^27.5.2",
+    "@types/node": "^16.18.39",
+    "@types/react": "^18.2.18",
+    "@types/react-dom": "^18.2.7",
+    "@types/react-router-dom": "^5.3.3",
+    "antd": "^5.8.3",
+    "axios": "^1.4.0",
+    "chart.js": "^4.4.0",
+    "dotenv": "^16.3.1",
+    "framer-motion": "^10.15.0",
+    "raw-loader": "4",
+    "react": "^18.2.0",
+    "react-chartjs-2": "^5.2.0",
+    "react-dom": "^18.2.0",
+    "react-redux": "^8.1.2",
+    "react-router-dom": "5.3.4",
+    "react-scripts": "5.0.1",
+    "redux": "^4.2.1",
+    "redux-saga": "^1.2.3",
+    "sass": "^1.66.1",
+    "typescript": "^4.9.5",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
