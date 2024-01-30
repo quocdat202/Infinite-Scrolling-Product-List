@@ -6,13 +6,14 @@ import { fetchProducts, fetchSearchProducts } from 'slices/productsSlice';
 import { Spin } from 'antd';
 import type { SearchProps } from 'antd/es/input/Search';
 import { ProductTypes, dataProducts } from 'models';
+import NoData from 'components/ui/Empty';
 
 const { Meta } = Card;
 const { Content } = Layout;
 
 const Products: React.FC = () => {
     const dispatch = useAppDispatch();
-    const selectorProducts = useAppSelector<any>((state) => state.products);
+    const selectorProducts = useAppSelector<any>((state) => state);
     const [spinning, setSpinning] = useState<boolean>(false);
     const { Search } = Input;
     const panelProductsRef = useRef<HTMLDivElement>(null);
@@ -28,13 +29,13 @@ const Products: React.FC = () => {
     }, [params]);
 
     useEffect(() => {
-        setDataProducts({ data: selectorProducts.data.products })
+        setDataProducts({ data: selectorProducts.products.data })
     }, [selectorProducts]);
 
     const handleScroll = () => {
         const productRef = panelProductsRef.current;
         if (productRef && productRef.scrollHeight - productRef.scrollTop === productRef.clientHeight) {
-            if (!selectorProducts.isLoading) {
+            if (!selectorProducts.products.isLoading) {
                 setSpinning(true);
                 setTimeout(() => {
                     setParams({ limit: dataProducts.data.length + 20, skip: 0 })
@@ -77,7 +78,7 @@ const Products: React.FC = () => {
                             </Card>
                         ))
                     ) : (
-                        'No Data'
+                        <NoData />
                     )}
 
                 </div>

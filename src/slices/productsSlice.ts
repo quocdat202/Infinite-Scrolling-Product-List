@@ -17,16 +17,16 @@ const productsSlice = createSlice({
         fetchSearchProducts: (state, action: PayloadAction<any>) => { },
 
         fetchProductsSuccess: (state, action: PayloadAction<any>) => {
-            state.data = action.payload
+            state.data = action.payload.products
             state.isLoading = false
-            state.statusCode = 200
-            state.messageResponse = 'Success'
+            state.statusCode = action.payload.statusCode
+            state.messageResponse = action.payload.messageResponse
         },
         fetchSearchProductsSuccess: (state, action: PayloadAction<any>) => {
-            state.data = action.payload
+            state.data = action.payload.products
             state.isLoading = true
-            state.statusCode = 200
-            state.messageResponse = 'Success'
+            state.statusCode = action.payload.statusCode
+            state.messageResponse = action.payload.messageResponse
         },
     },
 });
