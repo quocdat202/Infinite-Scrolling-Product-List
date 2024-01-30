@@ -10,7 +10,6 @@ interface NotificationProps {
 
 const Notification: React.FC<NotificationProps> = (props: any) => {
     const { type, description, title } = props;
-    console.log("🤔🤔🤔 ~ file: notification.tsx:6 ~ props:", props)
 
 
     return (

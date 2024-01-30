@@ -10,7 +10,7 @@ const { Content } = Layout;
 function App() {
 
   return (
-    <>
+    <div className='container-app'>
       <Layout className="site-layout" >
         <Content style={{ margin: '10px 10px', overflow: 'initial' }}>
           <Switch>
@@ -19,7 +19,7 @@ function App() {
         </Content>
       </Layout>
       <FooterCM />
-    </>
+    </div>
   );
 }
 

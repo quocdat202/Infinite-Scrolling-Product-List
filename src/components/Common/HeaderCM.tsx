@@ -1,4 +1,3 @@
-import React from 'react';
 import { Layout, Menu, theme } from 'antd';
 const { Header } = Layout;
 const HeaderCM = (props: any) => {
